@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F18D55C1159F61F400BA040E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C0159F61F400BA040E /* UIKit.framework */; };
+		F18D55C3159F61F400BA040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C2159F61F400BA040E /* Foundation.framework */; };
+		F18D55C5159F61F400BA040E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C4159F61F400BA040E /* CoreGraphics.framework */; };
+		F18D55CB159F61F400BA040E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F18D55C9159F61F400BA040E /* InfoPlist.strings */; };
+		F18D55CD159F61F400BA040E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55CC159F61F400BA040E /* main.m */; };
+		F18D55D1159F61F400BA040E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55D0159F61F400BA040E /* AppDelegate.m */; };
+		F18D55D4159F61F400BA040E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55D3159F61F400BA040E /* FirstViewController.m */; };
+		F18D55D6159F61F400BA040E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = F18D55D5159F61F400BA040E /* first.png */; };
+		F18D55D8159F61F400BA040E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F18D55D7159F61F400BA040E /* first@2x.png */; };
+		F18D55DB159F61F400BA040E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55DA159F61F400BA040E /* SecondViewController.m */; };
+		F18D55DD159F61F400BA040E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = F18D55DC159F61F400BA040E /* second.png */; };
+		F18D55DF159F61F400BA040E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F18D55DE159F61F400BA040E /* second@2x.png */; };
+		F18D55E2159F61F400BA040E /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D55E0159F61F400BA040E /* FirstViewController.xib */; };
+		F18D55E5159F61F400BA040E /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D55E3159F61F400BA040E /* SecondViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F18D55BC159F61F400BA040E /* StoreFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F18D55C0159F61F400BA040E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F18D55C2159F61F400BA040E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F18D55C4159F61F400BA040E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F18D55C8159F61F400BA040E /* StoreFinder-Info.plist */ = {isa = PBXFileReference; path = "StoreFinder-Info.plist"; sourceTree = "<group>"; };
+		F18D55CA159F61F400BA040E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F18D55CC159F61F400BA040E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F18D55CE159F61F400BA040E /* StoreFinder-Prefix.pch */ = {isa = PBXFileReference; path = "StoreFinder-Prefix.pch"; sourceTree = "<group>"; };
+		F18D55CF159F61F400BA040E /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F18D55D0159F61F400BA040E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F18D55D2159F61F400BA040E /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		F18D55D3159F61F400BA040E /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		F18D55D5159F61F400BA040E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		F18D55D7159F61F400BA040E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		F18D55D9159F61F400BA040E /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		F18D55DA159F61F400BA040E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F18D55DC159F61F400BA040E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		F18D55DE159F61F400BA040E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		F18D55E1159F61F400BA040E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
+		F18D55E4159F61F400BA040E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F18D55B9159F61F400BA040E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18D55C1159F61F400BA040E /* UIKit.framework in Frameworks */,
+				F18D55C3159F61F400BA040E /* Foundation.framework in Frameworks */,
+				F18D55C5159F61F400BA040E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F18D55B1159F61F400BA040E = {
+			isa = PBXGroup;
+			children = (
+				F18D55C6159F61F400BA040E /* StoreFinder */,
+				F18D55BF159F61F400BA040E /* Frameworks */,
+				F18D55BD159F61F400BA040E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F18D55BD159F61F400BA040E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F18D55BC159F61F400BA040E /* StoreFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F18D55BF159F61F400BA040E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F18D55C0159F61F400BA040E /* UIKit.framework */,
+				F18D55C2159F61F400BA040E /* Foundation.framework */,
+				F18D55C4159F61F400BA040E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F18D55C6159F61F400BA040E /* StoreFinder */ = {
+			isa = PBXGroup;
+			children = (
+				F18D55CF159F61F400BA040E /* AppDelegate.h */,
+				F18D55D0159F61F400BA040E /* AppDelegate.m */,
+				F18D55D2159F61F400BA040E /* FirstViewController.h */,
+				F18D55D3159F61F400BA040E /* FirstViewController.m */,
+				F18D55D5159F61F400BA040E /* first.png */,
+				F18D55D7159F61F400BA040E /* first@2x.png */,
+				F18D55D9159F61F400BA040E /* SecondViewController.h */,
+				F18D55DA159F61F400BA040E /* SecondViewController.m */,
+				F18D55DC159F61F400BA040E /* second.png */,
+				F18D55DE159F61F400BA040E /* second@2x.png */,
+				F18D55E0159F61F400BA040E /* FirstViewController.xib */,
+				F18D55E3159F61F400BA040E /* SecondViewController.xib */,
+				F18D55C7159F61F400BA040E /* Supporting Files */,
+			);
+			path = StoreFinder;
+			sourceTree = "<group>";
+		};
+		F18D55C7159F61F400BA040E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F18D55C8159F61F400BA040E /* StoreFinder-Info.plist */,
+				F18D55C9159F61F400BA040E /* InfoPlist.strings */,
+				F18D55CC159F61F400BA040E /* main.m */,
+				F18D55CE159F61F400BA040E /* StoreFinder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F18D55BB159F61F400BA040E /* StoreFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F18D55E8159F61F400BA040E /* Build configuration list for PBXNativeTarget "StoreFinder" */;
+			buildPhases = (
+				F18D55B8159F61F400BA040E /* Sources */,
+				F18D55B9159F61F400BA040E /* Frameworks */,
+				F18D55BA159F61F400BA040E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StoreFinder;
+			productName = StoreFinder;
+			productReference = F18D55BC159F61F400BA040E /* StoreFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F18D55B3159F61F400BA040E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Geordie Enterprises LLC";
+			};
+			buildConfigurationList = F18D55B6159F61F400BA040E /* Build configuration list for PBXProject "StoreFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F18D55B1159F61F400BA040E;
+			productRefGroup = F18D55BD159F61F400BA040E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F18D55BB159F61F400BA040E /* StoreFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F18D55BA159F61F400BA040E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18D55CB159F61F400BA040E /* InfoPlist.strings in Resources */,
+				F18D55D6159F61F400BA040E /* first.png in Resources */,
+				F18D55D8159F61F400BA040E /* first@2x.png in Resources */,
+				F18D55DD159F61F400BA040E /* second.png in Resources */,
+				F18D55DF159F61F400BA040E /* second@2x.png in Resources */,
+				F18D55E2159F61F400BA040E /* FirstViewController.xib in Resources */,
+				F18D55E5159F61F400BA040E /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F18D55B8159F61F400BA040E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18D55CD159F61F400BA040E /* main.m in Sources */,
+				F18D55D1159F61F400BA040E /* AppDelegate.m in Sources */,
+				F18D55D4159F61F400BA040E /* FirstViewController.m in Sources */,
+				F18D55DB159F61F400BA040E /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F18D55C9159F61F400BA040E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F18D55CA159F61F400BA040E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F18D55E0159F61F400BA040E /* FirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F18D55E1159F61F400BA040E /* en */,
+			);
+			name = FirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		F18D55E3159F61F400BA040E /* SecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F18D55E4159F61F400BA040E /* en */,
+			);
+			name = SecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F18D55E6159F61F400BA040E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F18D55E7159F61F400BA040E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F18D55E9159F61F400BA040E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StoreFinder/StoreFinder-Prefix.pch";
+				INFOPLIST_FILE = "StoreFinder/StoreFinder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F18D55EA159F61F400BA040E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StoreFinder/StoreFinder-Prefix.pch";
+				INFOPLIST_FILE = "StoreFinder/StoreFinder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F18D55B6159F61F400BA040E /* Build configuration list for PBXProject "StoreFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F18D55E6159F61F400BA040E /* Debug */,
+				F18D55E7159F61F400BA040E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F18D55E8159F61F400BA040E /* Build configuration list for PBXNativeTarget "StoreFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F18D55E9159F61F400BA040E /* Debug */,
+				F18D55EA159F61F400BA040E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F18D55B3159F61F400BA040E /* Project object */;
+}
