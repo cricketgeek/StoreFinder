@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "StoreListViewController.h"
-#import "WebViewController.h"
+#import "FFAStoreListViewController.h"
+#import "FFAWebViewController.h"
 
 @implementation AppDelegate
 
@@ -27,10 +27,16 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[StoreListViewController alloc] initWithNibName:@"TableViewController" bundle:nil] autorelease];
-    UIViewController *viewController2 = [[[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil] autorelease];
+    UIViewController *viewController1 = [[[FFAStoreListViewController alloc] initWithNibName:@"FFAStoreListViewController" bundle:nil] autorelease];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    [navController setTitle:@"TableView"];
+    
+    
+    UIViewController *viewController2 = [[[FFAWebViewController alloc] initWithNibName:@"FFAWebViewController" bundle:nil] autorelease];
+    [viewController2 setTitle:@"WebView"];
+    
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController, viewController2, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
