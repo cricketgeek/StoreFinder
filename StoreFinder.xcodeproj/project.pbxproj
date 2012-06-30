@@ -13,14 +13,14 @@
 		F18D55CB159F61F400BA040E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F18D55C9159F61F400BA040E /* InfoPlist.strings */; };
 		F18D55CD159F61F400BA040E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55CC159F61F400BA040E /* main.m */; };
 		F18D55D1159F61F400BA040E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55D0159F61F400BA040E /* AppDelegate.m */; };
-		F18D55D4159F61F400BA040E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55D3159F61F400BA040E /* FirstViewController.m */; };
-		F18D55D6159F61F400BA040E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = F18D55D5159F61F400BA040E /* first.png */; };
-		F18D55D8159F61F400BA040E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F18D55D7159F61F400BA040E /* first@2x.png */; };
-		F18D55DB159F61F400BA040E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55DA159F61F400BA040E /* SecondViewController.m */; };
-		F18D55DD159F61F400BA040E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = F18D55DC159F61F400BA040E /* second.png */; };
-		F18D55DF159F61F400BA040E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F18D55DE159F61F400BA040E /* second@2x.png */; };
-		F18D55E2159F61F400BA040E /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D55E0159F61F400BA040E /* FirstViewController.xib */; };
-		F18D55E5159F61F400BA040E /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D55E3159F61F400BA040E /* SecondViewController.xib */; };
+		F18D55F2159F62CE00BA040E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55F0159F62CE00BA040E /* WebViewController.m */; };
+		F18D55F3159F62CE00BA040E /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D55F1159F62CE00BA040E /* WebViewController.xib */; };
+		F18D55F6159F62E800BA040E /* WebHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55F5159F62E800BA040E /* WebHistory.m */; };
+		F18D55FA159F631000BA040E /* StoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55F8159F631000BA040E /* StoreListViewController.m */; };
+		F18D55FB159F631000BA040E /* StoreListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D55F9159F631000BA040E /* StoreListViewController.xib */; };
+		F18D55FE159F632600BA040E /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D55FD159F632600BA040E /* Store.m */; };
+		F18D5603159F64B000BA040E /* StoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D5601159F64B000BA040E /* StoreDetailViewController.m */; };
+		F18D5604159F64B000BA040E /* StoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D5602159F64B000BA040E /* StoreDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,22 +28,25 @@
 		F18D55C0159F61F400BA040E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F18D55C2159F61F400BA040E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F18D55C4159F61F400BA040E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F18D55C8159F61F400BA040E /* StoreFinder-Info.plist */ = {isa = PBXFileReference; path = "StoreFinder-Info.plist"; sourceTree = "<group>"; };
+		F18D55C8159F61F400BA040E /* StoreFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoreFinder-Info.plist"; sourceTree = "<group>"; };
 		F18D55CA159F61F400BA040E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F18D55CC159F61F400BA040E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F18D55CE159F61F400BA040E /* StoreFinder-Prefix.pch */ = {isa = PBXFileReference; path = "StoreFinder-Prefix.pch"; sourceTree = "<group>"; };
-		F18D55CF159F61F400BA040E /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F18D55CE159F61F400BA040E /* StoreFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoreFinder-Prefix.pch"; sourceTree = "<group>"; };
+		F18D55CF159F61F400BA040E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F18D55D0159F61F400BA040E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F18D55D2159F61F400BA040E /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		F18D55D3159F61F400BA040E /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		F18D55D5159F61F400BA040E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		F18D55D7159F61F400BA040E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		F18D55D9159F61F400BA040E /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
-		F18D55DA159F61F400BA040E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		F18D55DC159F61F400BA040E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		F18D55DE159F61F400BA040E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		F18D55E1159F61F400BA040E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
-		F18D55E4159F61F400BA040E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		F18D55EF159F62CE00BA040E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		F18D55F0159F62CE00BA040E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		F18D55F1159F62CE00BA040E /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		F18D55F4159F62E800BA040E /* WebHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebHistory.h; sourceTree = "<group>"; };
+		F18D55F5159F62E800BA040E /* WebHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebHistory.m; sourceTree = "<group>"; };
+		F18D55F7159F631000BA040E /* StoreListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreListViewController.h; sourceTree = "<group>"; };
+		F18D55F8159F631000BA040E /* StoreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreListViewController.m; sourceTree = "<group>"; };
+		F18D55F9159F631000BA040E /* StoreListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreListViewController.xib; sourceTree = "<group>"; };
+		F18D55FC159F632600BA040E /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		F18D55FD159F632600BA040E /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		F18D5600159F64B000BA040E /* StoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreDetailViewController.h; sourceTree = "<group>"; };
+		F18D5601159F64B000BA040E /* StoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDetailViewController.m; sourceTree = "<group>"; };
+		F18D5602159F64B000BA040E /* StoreDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,18 +93,11 @@
 		F18D55C6159F61F400BA040E /* StoreFinder */ = {
 			isa = PBXGroup;
 			children = (
+				F18D55FF159F635000BA040E /* Libraries */,
+				F18D55EE159F628100BA040E /* WebView */,
+				F18D55ED159F626900BA040E /* TableView */,
 				F18D55CF159F61F400BA040E /* AppDelegate.h */,
 				F18D55D0159F61F400BA040E /* AppDelegate.m */,
-				F18D55D2159F61F400BA040E /* FirstViewController.h */,
-				F18D55D3159F61F400BA040E /* FirstViewController.m */,
-				F18D55D5159F61F400BA040E /* first.png */,
-				F18D55D7159F61F400BA040E /* first@2x.png */,
-				F18D55D9159F61F400BA040E /* SecondViewController.h */,
-				F18D55DA159F61F400BA040E /* SecondViewController.m */,
-				F18D55DC159F61F400BA040E /* second.png */,
-				F18D55DE159F61F400BA040E /* second@2x.png */,
-				F18D55E0159F61F400BA040E /* FirstViewController.xib */,
-				F18D55E3159F61F400BA040E /* SecondViewController.xib */,
 				F18D55C7159F61F400BA040E /* Supporting Files */,
 			);
 			path = StoreFinder;
@@ -116,6 +112,40 @@
 				F18D55CE159F61F400BA040E /* StoreFinder-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F18D55ED159F626900BA040E /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F18D55F7159F631000BA040E /* StoreListViewController.h */,
+				F18D55F8159F631000BA040E /* StoreListViewController.m */,
+				F18D55F9159F631000BA040E /* StoreListViewController.xib */,
+				F18D55FC159F632600BA040E /* Store.h */,
+				F18D55FD159F632600BA040E /* Store.m */,
+				F18D5600159F64B000BA040E /* StoreDetailViewController.h */,
+				F18D5601159F64B000BA040E /* StoreDetailViewController.m */,
+				F18D5602159F64B000BA040E /* StoreDetailViewController.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		F18D55EE159F628100BA040E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				F18D55EF159F62CE00BA040E /* WebViewController.h */,
+				F18D55F0159F62CE00BA040E /* WebViewController.m */,
+				F18D55F1159F62CE00BA040E /* WebViewController.xib */,
+				F18D55F4159F62E800BA040E /* WebHistory.h */,
+				F18D55F5159F62E800BA040E /* WebHistory.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		F18D55FF159F635000BA040E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,12 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F18D55CB159F61F400BA040E /* InfoPlist.strings in Resources */,
-				F18D55D6159F61F400BA040E /* first.png in Resources */,
-				F18D55D8159F61F400BA040E /* first@2x.png in Resources */,
-				F18D55DD159F61F400BA040E /* second.png in Resources */,
-				F18D55DF159F61F400BA040E /* second@2x.png in Resources */,
-				F18D55E2159F61F400BA040E /* FirstViewController.xib in Resources */,
-				F18D55E5159F61F400BA040E /* SecondViewController.xib in Resources */,
+				F18D55F3159F62CE00BA040E /* WebViewController.xib in Resources */,
+				F18D55FB159F631000BA040E /* StoreListViewController.xib in Resources */,
+				F18D5604159F64B000BA040E /* StoreDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +215,11 @@
 			files = (
 				F18D55CD159F61F400BA040E /* main.m in Sources */,
 				F18D55D1159F61F400BA040E /* AppDelegate.m in Sources */,
-				F18D55D4159F61F400BA040E /* FirstViewController.m in Sources */,
-				F18D55DB159F61F400BA040E /* SecondViewController.m in Sources */,
+				F18D55F2159F62CE00BA040E /* WebViewController.m in Sources */,
+				F18D55F6159F62E800BA040E /* WebHistory.m in Sources */,
+				F18D55FA159F631000BA040E /* StoreListViewController.m in Sources */,
+				F18D55FE159F632600BA040E /* Store.m in Sources */,
+				F18D5603159F64B000BA040E /* StoreDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,22 +232,6 @@
 				F18D55CA159F61F400BA040E /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F18D55E0159F61F400BA040E /* FirstViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F18D55E1159F61F400BA040E /* en */,
-			);
-			name = FirstViewController.xib;
-			sourceTree = "<group>";
-		};
-		F18D55E3159F61F400BA040E /* SecondViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F18D55E4159F61F400BA040E /* en */,
-			);
-			name = SecondViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -272,6 +286,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoreFinder/StoreFinder-Prefix.pch";
 				INFOPLIST_FILE = "StoreFinder/StoreFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -283,6 +298,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoreFinder/StoreFinder-Prefix.pch";
 				INFOPLIST_FILE = "StoreFinder/StoreFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
