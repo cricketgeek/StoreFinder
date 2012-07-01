@@ -43,7 +43,7 @@
 							<object class="IBUIImageView" id="232128208">
 								<reference key="NSNextResponder" ref="532228551"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{0, -17}, {320, 66}}</string>
+								<string key="NSFrame">{{10, 4}, {300, 75}}</string>
 								<reference key="NSSuperview" ref="532228551"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="660744583"/>
@@ -51,11 +51,15 @@
 								<int key="IBUIContentMode">4</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">defaultStoreLogo.png</string>
+								</object>
 							</object>
 							<object class="IBUILabel" id="660744583">
 								<reference key="NSNextResponder" ref="532228551"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 57}, {126, 21}}</string>
+								<string key="NSFrame">{{10, 87}, {126, 21}}</string>
 								<reference key="NSSuperview" ref="532228551"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="586656070"/>
@@ -89,7 +93,7 @@
 							<object class="IBUILabel" id="586656070">
 								<reference key="NSNextResponder" ref="532228551"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{164, 57}, {136, 21}}</string>
+								<string key="NSFrame">{{151, 87}, {159, 21}}</string>
 								<reference key="NSSuperview" ref="532228551"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -107,7 +111,7 @@
 								<reference key="IBUIFont" ref="698946977"/>
 							</object>
 						</array>
-						<string key="NSFrameSize">{320, 94}</string>
+						<string key="NSFrameSize">{320, 118.5}</string>
 						<reference key="NSSuperview" ref="571794435"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="232128208"/>
@@ -123,7 +127,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 95}</string>
+				<string key="NSFrameSize">{320, 119.5}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="532228551"/>
@@ -136,7 +140,7 @@
 				<int key="IBUISelectionStyle">2</int>
 				<reference key="IBUIContentView" ref="532228551"/>
 				<string key="IBUIReuseIdentifier">StoreCell</string>
-				<real value="95" key="IBUIRowHeight"/>
+				<real value="121.5" key="IBUIRowHeight"/>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -295,6 +299,10 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">defaultStoreLogo.png</string>
+			<string key="NS.object.0">{320, 95}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">1181</string>
 	</data>
 </archive>

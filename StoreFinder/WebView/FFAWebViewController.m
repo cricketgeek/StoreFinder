@@ -48,6 +48,7 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     NSLog(@"loading web content...");
+    [self configureNavButtons];
 }
 
 
@@ -64,21 +65,18 @@
 {
     [self stopLoading];
     [self.webView goForward];
-    [self configureNavButtons];
 }
 
 - (IBAction)goBack:(id)sender
 {
     [self stopLoading];
     [self.webView goBack];
-    [self configureNavButtons];    
 }
 
 - (IBAction)refresh:(id)sender
 {
     [self stopLoading];
     [self.webView reload];
-    [self configureNavButtons];
 }
 
 - (IBAction)stop:(id)sender

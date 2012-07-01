@@ -13,7 +13,8 @@
 #import "FFAStoreDetailViewController.h"
 
 #define LOGO_WIDTH 300
-#define LOGO_HEIGHT 60
+#define LOGO_HEIGHT 75
+#define ROW_HEIGHT 120
 
 @interface FFAStoreListViewController ()
 
@@ -92,13 +93,10 @@
         [self.queue addOperationWithBlock:^{
             NSString * logoPath = store.logoURLPath;
             NSURL * logoURL = [NSURL URLWithString:logoPath];
-            NSData *imageData = [NSData dataWithContentsOfURL:logoURL];
-            NSLog(@"Loaded image data from url %@ size %d",logoPath,[imageData length]);
+            NSData *imageData = [NSData dataWithContentsOfURL:logoURL];            
             
-            
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                NSLog(@"On mainqueue setting image size %d",[imageData length]);
-                
+            //Load image on mainQueue/main thread
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{                
                 UIImage *image = [UIImage imageWithData:imageData];
                 CGSize itemSize = CGSizeMake(LOGO_WIDTH, LOGO_HEIGHT);
                 UIGraphicsBeginImageContext(itemSize);
@@ -107,9 +105,13 @@
                 store.logo = UIGraphicsGetImageFromCurrentImageContext();
                 UIGraphicsEndImageContext();
                 FFAStoreCell *cell = (FFAStoreCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+                
+                NSLog([NSString stringWithFormat:@"********\nstore %@ with address %@ and phone %@ has a logo now",store.name,store.address,store.phone]);
                 cell.logoImageView.image = store.logo;
+                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
             }];
-        }];        
+        }];
+        cell.logoImageView.image = [UIImage imageNamed:@"defaultStoreLogo.png"];
     }
     else {
         cell.logoImageView.image = store.logo;
@@ -134,7 +136,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 95.0;
+    return ROW_HEIGHT;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

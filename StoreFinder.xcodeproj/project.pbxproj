@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1556388159FCFC200A6BD73 /* defaultStoreLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */; };
 		F18D55C1159F61F400BA040E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C0159F61F400BA040E /* UIKit.framework */; };
 		F18D55C3159F61F400BA040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C2159F61F400BA040E /* Foundation.framework */; };
 		F18D55C5159F61F400BA040E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C4159F61F400BA040E /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultStoreLogo.png; sourceTree = "<group>"; };
 		F18D55BC159F61F400BA040E /* StoreFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18D55C0159F61F400BA040E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F18D55C2159F61F400BA040E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1556384159FCFC200A6BD73 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		F18D55B1159F61F400BA040E = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		F18D55C6159F61F400BA040E /* StoreFinder */ = {
 			isa = PBXGroup;
 			children = (
+				F1556384159FCFC200A6BD73 /* Images */,
 				F18D55FF159F635000BA040E /* Libraries */,
 				F18D55EE159F628100BA040E /* WebView */,
 				F18D55ED159F626900BA040E /* TableView */,
@@ -296,6 +307,7 @@
 				F18D55FB159F631000BA040E /* FFAStoreListViewController.xib in Resources */,
 				F18D5604159F64B000BA040E /* FFAStoreDetailViewController.xib in Resources */,
 				F18D5637159F98B400BA040E /* FFAStoreCell.xib in Resources */,
+				F1556388159FCFC200A6BD73 /* defaultStoreLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

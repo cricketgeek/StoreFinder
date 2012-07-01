@@ -30,7 +30,7 @@
     UIViewController *viewController1 = [[[FFAStoreListViewController alloc] initWithNibName:@"FFAStoreListViewController" bundle:nil] autorelease];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController1];
     [navController setTitle:@"TableView"];
-    
+    [navController.navigationBar setBarStyle:UIBarStyleBlack];
     
     UIViewController *viewController2 = [[[FFAWebViewController alloc] initWithNibName:@"FFAWebViewController" bundle:nil] autorelease];
     [viewController2 setTitle:@"WebView"];
