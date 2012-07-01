@@ -407,11 +407,13 @@
 		F18D55E9159F61F400BA040E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Christian Jones (8NKE9JCJS2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoreFinder/StoreFinder-Prefix.pch";
 				INFOPLIST_FILE = "StoreFinder/StoreFinder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1F16C363-AA62-483C-8446-7D1042E962FF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
