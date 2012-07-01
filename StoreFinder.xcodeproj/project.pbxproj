@@ -35,7 +35,6 @@
 		F18D5629159F6CC400BA040E /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D561D159F6CC400BA040E /* CJSONScanner.m */; };
 		F18D562A159F6CC400BA040E /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D561F159F6CC400BA040E /* CJSONSerializer.m */; };
 		F18D5635159F93C800BA040E /* FFAStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F18D5634159F93C800BA040E /* FFAStoreCell.m */; };
-		F18D5637159F98B400BA040E /* FFAStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D5636159F98B400BA040E /* FFAStoreCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,7 +87,6 @@
 		F18D5620159F6CC400BA040E /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		F18D5633159F93C700BA040E /* FFAStoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAStoreCell.h; sourceTree = "<group>"; };
 		F18D5634159F93C800BA040E /* FFAStoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAStoreCell.m; sourceTree = "<group>"; };
-		F18D5636159F98B400BA040E /* FFAStoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFAStoreCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +182,6 @@
 				F18D5606159F6A6400BA040E /* FFAStoresRequest.m */,
 				F18D5633159F93C700BA040E /* FFAStoreCell.h */,
 				F18D5634159F93C800BA040E /* FFAStoreCell.m */,
-				F18D5636159F98B400BA040E /* FFAStoreCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -314,7 +311,6 @@
 				F18D55F3159F62CE00BA040E /* FFAWebViewController.xib in Resources */,
 				F18D55FB159F631000BA040E /* FFAStoreListViewController.xib in Resources */,
 				F18D5604159F64B000BA040E /* FFAStoreDetailViewController.xib in Resources */,
-				F18D5637159F98B400BA040E /* FFAStoreCell.xib in Resources */,
 				F1556388159FCFC200A6BD73 /* defaultStoreLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

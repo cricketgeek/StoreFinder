@@ -20,8 +20,6 @@
 
 @synthesize stores;
 @synthesize queue;
-@synthesize ffaStoreCell;
-@synthesize cellNib;
 @synthesize loadedLogos;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -37,7 +35,6 @@
     [self.queue cancelAllOperations];
     [self.queue release];
     self.queue = nil;
-    [self.ffaStoreCell release];
     [super dealloc];
 }
 
@@ -47,7 +44,6 @@
     self.loadedLogos = [NSMutableDictionary dictionary];
     self.queue = [[NSOperationQueue alloc] init];
     [self.navigationItem setTitle:@"Stores"];
-    self.cellNib = [UINib nibWithNibName:@"FFAStoreCell" bundle:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -61,10 +57,8 @@
 
 - (void)viewDidUnload
 {
-    [self setFfaStoreCell:nil];
     [super viewDidUnload];
     self.queue = nil;
-    self.cellNib = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -98,13 +92,13 @@
 - (void)configureCell:(FFAStoreCell*)cell forIndexPath:(NSIndexPath*)indexPath
 {
     FFAStore *store = [self.stores objectAtIndex:indexPath.row];
-    cell.phoneLabel.text = store.phone;
-    cell.addressLabel.text = store.address;
+    cell.phone = store.phone;
+    cell.address = store.address;
     
     if (!store.logo) {
         if ([self.loadedLogos objectForKey:store.logoURLPath]) {
             store.logo = [self.loadedLogos objectForKey:store.logoURLPath];
-            cell.logoImageView.image = store.logo;
+            [cell setLogoImage:store.logo];
         }
         else {
             [self.queue addOperationWithBlock:^{
@@ -116,19 +110,19 @@
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{                
                     UIImage *image = [UIImage imageWithData:imageData];
                     store.logo = [self resizeImage:image toSize:CGSizeMake(LOGO_WIDTH, LOGO_HEIGHT)];
-                    
                     FFAStoreCell *cell = (FFAStoreCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
-                    cell.logoImageView.image = store.logo;
+                    [cell setLogoImage:store.logo];
                     if (![self.loadedLogos objectForKey:store.logoURLPath]) {
                         [self.loadedLogos setObject:store.logo forKey:store.logoURLPath];
                     }
+                    //                    [cell performSelectorOnMainThread:@selector(setNeedsDisplay) withObject:nil waitUntilDone:NO];
                     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
                 }];
             }];
         }        
     }
     else {
-        cell.logoImageView.image = store.logo;
+        [cell setLogoImage:store.logo];
     }
 }
 
@@ -138,9 +132,7 @@
     FFAStoreCell *cell = (FFAStoreCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        [self.cellNib instantiateWithOwner:self options:nil];
-        cell = self.ffaStoreCell;
-        self.ffaStoreCell = nil;
+        cell = [[FFAStoreCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     [self configureCell:cell forIndexPath:indexPath];
     return cell;

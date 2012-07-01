@@ -14,8 +14,6 @@
 
 @property (nonatomic, retain) NSArray *stores;
 @property (nonatomic, retain) NSOperationQueue *queue;
-@property (retain, nonatomic) IBOutlet FFAStoreCell *ffaStoreCell;
-@property (nonatomic, retain) UINib *cellNib;
 @property (nonatomic, retain) NSMutableDictionary *loadedLogos;
 
 @end
