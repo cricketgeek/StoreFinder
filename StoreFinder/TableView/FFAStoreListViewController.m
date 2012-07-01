@@ -12,9 +12,9 @@
 #import "FFAStore.h"
 #import "FFAStoreDetailViewController.h"
 
-#define LOGO_WIDTH 300
-#define LOGO_HEIGHT 75
-#define ROW_HEIGHT 120
+#define LOGO_WIDTH 310
+#define LOGO_HEIGHT 50
+#define ROW_HEIGHT 110
 
 @implementation FFAStoreListViewController
 
@@ -98,7 +98,6 @@
             [self.queue addOperationWithBlock:^{
                 NSString * logoPath = store.logoURLPath;
                 NSURL * logoURL = [NSURL URLWithString:logoPath];
-                NSLog(@"about to load logo from %@",logoPath);
                 NSData *imageData = [NSData dataWithContentsOfURL:logoURL];            
                 
                 //Load image on mainQueue/main thread
@@ -153,6 +152,7 @@
 {
     FFAStore *store = [self.stores objectAtIndex:indexPath.row];
     FFAStoreDetailViewController *detailViewController = [[FFAStoreDetailViewController alloc] initWithStore:store];
+    [detailViewController setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
 }

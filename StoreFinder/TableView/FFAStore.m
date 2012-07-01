@@ -18,7 +18,7 @@
 @synthesize phone;
 @synthesize logoURLPath;
 @synthesize logo;
-
+@synthesize location;
 
 +(FFAStore*)storeFromDictionary:(NSDictionary*)dict
 {
@@ -30,6 +30,12 @@
     store.zip = [dict objectForKey:@"zipcode"];
     store.logoURLPath = [dict objectForKey:@"storeLogoURL"];
     store.phone = [dict objectForKey:@"phone"];
+    NSNumber *lat = [dict objectForKey:@"latitude"];
+    NSNumber *lon = [dict objectForKey:@"longitude"];
+    
+    if (lat && lon) {
+        store.location = [[CLLocation alloc] initWithLatitude:[lat doubleValue] longitude:[lon doubleValue]];
+    }
     
     return store;
 }

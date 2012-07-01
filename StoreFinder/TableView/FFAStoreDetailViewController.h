@@ -7,15 +7,17 @@
 //
 #import "FFAStore.h"
 
-@interface FFAStoreDetailViewController : UIViewController
+@interface FFAStoreDetailViewController : UIViewController <MKMapViewDelegate>
+
 @property (retain, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (retain, nonatomic) IBOutlet UILabel *nameLabel;
 @property (retain, nonatomic) IBOutlet UILabel *addressLabel;
 @property (retain, nonatomic) IBOutlet UILabel *cityStateZipLabel;
-@property (retain, nonatomic) IBOutlet UIButton *callButton;
 @property (nonatomic, retain) FFAStore *store;
+@property (retain, nonatomic) IBOutlet MKMapView *mapView;
 
 
 - (id)initWithStore:(FFAStore*)aStore;
+- (IBAction)callStore:(id)sender;
 
 @end

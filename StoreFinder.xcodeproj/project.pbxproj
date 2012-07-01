@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F104DDCA15A0B4AA0094D0ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */; };
+		F104DDCB15A0B4AA0094D0ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F104DDC915A0B4AA0094D0ED /* MapKit.framework */; };
 		F1556388159FCFC200A6BD73 /* defaultStoreLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */; };
 		F18D55C1159F61F400BA040E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C0159F61F400BA040E /* UIKit.framework */; };
 		F18D55C3159F61F400BA040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C2159F61F400BA040E /* Foundation.framework */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F104DDC915A0B4AA0094D0ED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultStoreLogo.png; sourceTree = "<group>"; };
 		F18D55BC159F61F400BA040E /* StoreFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18D55C0159F61F400BA040E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -92,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F104DDCA15A0B4AA0094D0ED /* CoreLocation.framework in Frameworks */,
+				F104DDCB15A0B4AA0094D0ED /* MapKit.framework in Frameworks */,
 				F18D55C1159F61F400BA040E /* UIKit.framework in Frameworks */,
 				F18D55C3159F61F400BA040E /* Foundation.framework in Frameworks */,
 				F18D55C5159F61F400BA040E /* CoreGraphics.framework in Frameworks */,
@@ -112,6 +118,8 @@
 		F18D55B1159F61F400BA040E = {
 			isa = PBXGroup;
 			children = (
+				F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */,
+				F104DDC915A0B4AA0094D0ED /* MapKit.framework */,
 				F18D55C6159F61F400BA040E /* StoreFinder */,
 				F18D55BF159F61F400BA040E /* Frameworks */,
 				F18D55BD159F61F400BA040E /* Products */,
