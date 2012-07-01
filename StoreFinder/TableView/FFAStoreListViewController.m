@@ -16,15 +16,13 @@
 #define LOGO_HEIGHT 75
 #define ROW_HEIGHT 120
 
-@interface FFAStoreListViewController ()
-
-@end
-
 @implementation FFAStoreListViewController
 
 @synthesize stores;
-@synthesize queue=_queue;
-@synthesize ffaStoreCell = _ffaStoreCell;
+@synthesize queue;
+@synthesize ffaStoreCell;
+@synthesize cellNib;
+@synthesize loadedLogos;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,18 +34,20 @@
 
 - (void)dealloc
 {
-    [_queue cancelAllOperations];
-    [_queue release];
-    _queue = nil;
-    [_ffaStoreCell release];
+    [self.queue cancelAllOperations];
+    [self.queue release];
+    self.queue = nil;
+    [self.ffaStoreCell release];
     [super dealloc];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.loadedLogos = [NSMutableDictionary dictionary];
     self.queue = [[NSOperationQueue alloc] init];
     [self.navigationItem setTitle:@"Stores"];
+    self.cellNib = [UINib nibWithNibName:@"FFAStoreCell" bundle:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,6 +64,7 @@
     [self setFfaStoreCell:nil];
     [super viewDidUnload];
     self.queue = nil;
+    self.cellNib = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -90,28 +91,37 @@
     cell.addressLabel.text = store.address;
     
     if (!store.logo) {
-        [self.queue addOperationWithBlock:^{
-            NSString * logoPath = store.logoURLPath;
-            NSURL * logoURL = [NSURL URLWithString:logoPath];
-            NSData *imageData = [NSData dataWithContentsOfURL:logoURL];            
-            
-            //Load image on mainQueue/main thread
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{                
-                UIImage *image = [UIImage imageWithData:imageData];
-                CGSize itemSize = CGSizeMake(LOGO_WIDTH, LOGO_HEIGHT);
-                UIGraphicsBeginImageContext(itemSize);
-                CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-                [image drawInRect:imageRect];
-                store.logo = UIGraphicsGetImageFromCurrentImageContext();
-                UIGraphicsEndImageContext();
-                FFAStoreCell *cell = (FFAStoreCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+        if ([self.loadedLogos objectForKey:store.logoURLPath]) {
+            store.logo = [self.loadedLogos objectForKey:store.logoURLPath];
+        }
+        else {
+            [self.queue addOperationWithBlock:^{
+                NSString * logoPath = store.logoURLPath;
+                NSURL * logoURL = [NSURL URLWithString:logoPath];
+                NSLog(@"about to load logo from %@",logoPath);
+                NSData *imageData = [NSData dataWithContentsOfURL:logoURL];            
                 
-                NSLog([NSString stringWithFormat:@"********\nstore %@ with address %@ and phone %@ has a logo now",store.name,store.address,store.phone]);
-                cell.logoImageView.image = store.logo;
-                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                //Load image on mainQueue/main thread
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{                
+                    UIImage *image = [UIImage imageWithData:imageData];
+                    
+                    //TODO: deal with different orientations here
+                    CGSize itemSize = CGSizeMake(LOGO_WIDTH, LOGO_HEIGHT);
+                    UIGraphicsBeginImageContext(itemSize);
+                    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+                    [image drawInRect:imageRect];
+                    store.logo = UIGraphicsGetImageFromCurrentImageContext();
+                    UIGraphicsEndImageContext();
+                    FFAStoreCell *cell = (FFAStoreCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+                    cell.logoImageView.image = store.logo;
+                    if (![self.loadedLogos objectForKey:store.logoURLPath]) {
+                        [self.loadedLogos setObject:store.logo forKey:store.logoURLPath];
+                    }
+                    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                }];
             }];
-        }];
-        cell.logoImageView.image = [UIImage imageNamed:@"defaultStoreLogo.png"];
+            cell.logoImageView.image = [UIImage imageNamed:@"defaultStoreLogo.png"];
+        }        
     }
     else {
         cell.logoImageView.image = store.logo;
@@ -124,7 +134,7 @@
     FFAStoreCell *cell = (FFAStoreCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"FFAStoreCell" owner:self options:nil];
+        [self.cellNib instantiateWithOwner:self options:nil];
         cell = self.ffaStoreCell;
         self.ffaStoreCell = nil;
     }
