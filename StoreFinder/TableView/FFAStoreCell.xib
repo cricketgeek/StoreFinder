@@ -43,7 +43,7 @@
 							<object class="IBUIImageView" id="232128208">
 								<reference key="NSNextResponder" ref="532228551"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{0, 1}, {320, 55}}</string>
+								<string key="NSFrame">{{3, 3.5}, {220, 50}}</string>
 								<reference key="NSSuperview" ref="532228551"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="660744583"/>
@@ -59,7 +59,7 @@
 							<object class="IBUILabel" id="660744583">
 								<reference key="NSNextResponder" ref="532228551"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{10, 68}, {126, 21}}</string>
+								<string key="NSFrame">{{10, 63}, {126, 21}}</string>
 								<reference key="NSSuperview" ref="532228551"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="586656070"/>
@@ -93,9 +93,10 @@
 							<object class="IBUILabel" id="586656070">
 								<reference key="NSNextResponder" ref="532228551"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{151, 68}, {159, 37}}</string>
+								<string key="NSFrame">{{151, 63}, {159, 37}}</string>
 								<reference key="NSSuperview" ref="532228551"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -309,7 +310,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">defaultStoreLogo.png</string>
-			<string key="NS.object.0">{320, 95}</string>
+			<string key="NS.object.0">{320, 55}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">1181</string>
 	</data>

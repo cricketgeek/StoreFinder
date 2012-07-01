@@ -12,8 +12,8 @@
 #import "FFAStore.h"
 #import "FFAStoreDetailViewController.h"
 
-#define LOGO_WIDTH 310
-#define LOGO_HEIGHT 50
+#define LOGO_WIDTH 210
+#define LOGO_HEIGHT 45
 #define ROW_HEIGHT 110
 
 @implementation FFAStoreListViewController
@@ -84,6 +84,17 @@
     return [self.stores count];
 }
 
+- (UIImage*)resizeImage:(UIImage*)image toSize:(CGSize)size
+{
+    //TODO: deal with different orientations here
+    UIGraphicsBeginImageContext(size);
+    CGRect imageRect = CGRectMake(0.0, 0.0, size.width, size.height);                
+    [image drawInRect:imageRect];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext(); 
+    return newImage;
+}
+
 - (void)configureCell:(FFAStoreCell*)cell forIndexPath:(NSIndexPath*)indexPath
 {
     FFAStore *store = [self.stores objectAtIndex:indexPath.row];
@@ -93,6 +104,7 @@
     if (!store.logo) {
         if ([self.loadedLogos objectForKey:store.logoURLPath]) {
             store.logo = [self.loadedLogos objectForKey:store.logoURLPath];
+            cell.logoImageView.image = store.logo;
         }
         else {
             [self.queue addOperationWithBlock:^{
@@ -103,14 +115,8 @@
                 //Load image on mainQueue/main thread
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{                
                     UIImage *image = [UIImage imageWithData:imageData];
+                    store.logo = [self resizeImage:image toSize:CGSizeMake(LOGO_WIDTH, LOGO_HEIGHT)];
                     
-                    //TODO: deal with different orientations here
-                    CGSize itemSize = CGSizeMake(LOGO_WIDTH, LOGO_HEIGHT);
-                    UIGraphicsBeginImageContext(itemSize);
-                    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-                    [image drawInRect:imageRect];
-                    store.logo = UIGraphicsGetImageFromCurrentImageContext();
-                    UIGraphicsEndImageContext();
                     FFAStoreCell *cell = (FFAStoreCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
                     cell.logoImageView.image = store.logo;
                     if (![self.loadedLogos objectForKey:store.logoURLPath]) {
@@ -119,7 +125,6 @@
                     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
                 }];
             }];
-            cell.logoImageView.image = [UIImage imageNamed:@"defaultStoreLogo.png"];
         }        
     }
     else {
