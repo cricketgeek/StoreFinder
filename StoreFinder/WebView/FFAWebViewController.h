@@ -14,6 +14,7 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *backButton;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *forwardButton;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (retain, nonatomic) IBOutlet UIToolbar *toolbar;
 
 - (IBAction)goForward:(id)sender;
 - (IBAction)goBack:(id)sender;

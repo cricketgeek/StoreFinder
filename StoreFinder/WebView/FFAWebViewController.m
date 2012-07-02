@@ -19,6 +19,7 @@
 @synthesize stopButton;
 @synthesize refreshButton;
 @synthesize activityIndicator;
+@synthesize toolbar;
 
 
 #pragma mark - config nav button state
@@ -102,10 +103,12 @@
 {
     [super viewDidLoad];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:DEFAULT_URL]]];
+    [self.view bringSubviewToFront:self.activityIndicator];
 }
 
 - (void)viewDidUnload
 {
+    [self setToolbar:nil];
     [super viewDidUnload];
     self.webView = nil;
 }
@@ -115,4 +118,8 @@
     return YES;
 }
 
+- (void)dealloc {
+    [toolbar release];
+    [super dealloc];
+}
 @end

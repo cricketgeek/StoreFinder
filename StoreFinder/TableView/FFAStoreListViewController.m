@@ -35,9 +35,9 @@
 - (void)dealloc
 {
     [self.queue cancelAllOperations];
-    [self.queue release];
     self.queue = nil;
-    [self.ffaStoreCell release];
+    self.stores = nil;
+    self.ffaStoreCell = nil;
     [super dealloc];
 }
 
@@ -45,8 +45,8 @@
 {
     [super viewDidLoad];
     self.loadedLogos = [NSMutableDictionary dictionary];
-    self.queue = [[NSOperationQueue alloc] init];
-    [self.navigationItem setTitle:@"Stores"];
+    self.queue = [[[NSOperationQueue alloc] init] autorelease];
+    [self.navigationItem setTitle:[NSString stringWithFormat:@"Stores"]];
     self.cellNib = [UINib nibWithNibName:@"FFAStoreCell" bundle:nil];
 }
 
@@ -61,8 +61,8 @@
 
 - (void)viewDidUnload
 {
-    [self setFfaStoreCell:nil];
     [super viewDidUnload];
+    [self setFfaStoreCell:nil];
     self.queue = nil;
     self.cellNib = nil;
 }
@@ -169,7 +169,7 @@
         NSError *aError = nil;
         id deserializedObject = [deserializer deserialize:object error:&aError];
         NSArray *storeDicts = [deserializedObject objectForKey:@"stores"];
-        
+        [object release];
         NSMutableArray *localStores = [[NSMutableArray alloc] init];
         for (NSDictionary *dict in storeDicts) {
             [localStores addObject:[FFAStore storeFromDictionary:dict]];

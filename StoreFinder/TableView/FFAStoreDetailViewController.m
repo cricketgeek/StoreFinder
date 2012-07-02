@@ -22,6 +22,7 @@
 {
     UIBarButtonItem *callButton = [[UIBarButtonItem alloc] initWithTitle:@"Call" style:UIBarButtonItemStyleBordered target:self action:@selector(callStore:)];
     self.navigationItem.rightBarButtonItem = callButton;
+    [callButton release];
 }
 
 -(void)makeCall:(NSString*)number {
@@ -58,7 +59,7 @@
 {
     if (self.store.location) {
         
-        MKPointAnnotation *storePointAnnotation = [[MKPointAnnotation alloc] init];
+        MKPointAnnotation *storePointAnnotation = [[[MKPointAnnotation alloc] init] autorelease];
         storePointAnnotation.coordinate = self.store.location.coordinate;
         [self.mapView addAnnotation:storePointAnnotation];
     }

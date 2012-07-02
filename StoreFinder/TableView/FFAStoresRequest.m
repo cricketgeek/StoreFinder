@@ -20,7 +20,7 @@
 
 +(FFAStoresRequest*)startRequestForStoresWithDelegate:(id<FFAStoresRequestDelegate>)aDelegate
 {
-    FFAStoresRequest *ffaStoresRequest = [[FFAStoresRequest alloc] init];
+    FFAStoresRequest *ffaStoresRequest = [[[FFAStoresRequest alloc] init] autorelease];
     ffaStoresRequest.delegate = aDelegate;
     ffaStoresRequest.request = [NSURLRequest requestWithURL:[NSURL URLWithString:STORE_JSON_URL]];
     ffaStoresRequest.connection = [NSURLConnection connectionWithRequest:ffaStoresRequest.request delegate:ffaStoresRequest];

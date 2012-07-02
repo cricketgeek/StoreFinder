@@ -22,7 +22,7 @@
 
 +(FFAStore*)storeFromDictionary:(NSDictionary*)dict
 {
-    FFAStore *store = [[FFAStore alloc] init];
+    FFAStore *store = [[[FFAStore alloc] init] autorelease];
     store.name = [dict objectForKey:@"name"];
     store.address = [dict objectForKey:@"address"];
     store.city = [dict objectForKey:@"city"];
@@ -34,7 +34,7 @@
     NSNumber *lon = [dict objectForKey:@"longitude"];
     
     if (lat && lon) {
-        store.location = [[CLLocation alloc] initWithLatitude:[lat doubleValue] longitude:[lon doubleValue]];
+        store.location = [[[CLLocation alloc] initWithLatitude:[lat doubleValue] longitude:[lon doubleValue]] autorelease];
     }
     
     return store;

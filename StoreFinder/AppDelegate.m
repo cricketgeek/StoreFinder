@@ -28,7 +28,7 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[[FFAStoreListViewController alloc] initWithNibName:@"FFAStoreListViewController" bundle:nil] autorelease];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    UINavigationController *navController = [[[UINavigationController alloc] initWithRootViewController:viewController1] autorelease];
     [navController setTitle:@"TableView"];
     [navController.navigationBar setBarStyle:UIBarStyleBlack];
     
@@ -38,13 +38,14 @@
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController, viewController2, nil];
     
-    [viewController2 setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"WebView" image:[UIImage imageNamed:@"rss.png"] tag:0]];
-    [navController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"TableView" image:[UIImage imageNamed:@"credit_card.png"] tag:1]];
-    
+    UITabBarItem *tab1 = [[[UITabBarItem alloc] initWithTitle:@"WebView" image:[UIImage imageNamed:@"rss.png"] tag:0] autorelease];
+    [viewController2 setTabBarItem:tab1];
+    UITabBarItem *tab2 = [[[UITabBarItem alloc] initWithTitle:@"TableView" image:[UIImage imageNamed:@"credit_card.png"] tag:1] autorelease];
+    [navController setTabBarItem:tab2];
+
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
-
 
 @end
