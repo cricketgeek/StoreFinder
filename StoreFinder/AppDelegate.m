@@ -37,6 +37,10 @@
     
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController, viewController2, nil];
+    
+    [viewController2 setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"WebView" image:[UIImage imageNamed:@"rss.png"] tag:0]];
+    [navController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"TableView" image:[UIImage imageNamed:@"credit_card.png"] tag:1]];
+    
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

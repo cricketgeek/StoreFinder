@@ -14,8 +14,4 @@
 @property (nonatomic, retain) IBOutlet UILabel *phoneLabel;
 @property (nonatomic, retain) IBOutlet UILabel *addressLabel;
 
-
-- (void)setLogoImage:(UIImage*)anImage;
-- (void)change;
-
 @end
