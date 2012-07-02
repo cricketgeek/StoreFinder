@@ -10,6 +10,7 @@
 		F104DDCA15A0B4AA0094D0ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */; };
 		F104DDCB15A0B4AA0094D0ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F104DDC915A0B4AA0094D0ED /* MapKit.framework */; };
 		F1556388159FCFC200A6BD73 /* defaultStoreLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */; };
+		F16E16FA15A230E500AA13FE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F16E16F915A230E500AA13FE /* icon.png */; };
 		F18D55C1159F61F400BA040E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C0159F61F400BA040E /* UIKit.framework */; };
 		F18D55C3159F61F400BA040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C2159F61F400BA040E /* Foundation.framework */; };
 		F18D55C5159F61F400BA040E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C4159F61F400BA040E /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 		F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F104DDC915A0B4AA0094D0ED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultStoreLogo.png; sourceTree = "<group>"; };
+		F16E16F915A230E500AA13FE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		F18D55BC159F61F400BA040E /* StoreFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18D55C0159F61F400BA040E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F18D55C2159F61F400BA040E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +110,7 @@
 		F1556384159FCFC200A6BD73 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F16E16F915A230E500AA13FE /* icon.png */,
 				F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */,
 			);
 			path = Images;
@@ -116,8 +119,6 @@
 		F18D55B1159F61F400BA040E = {
 			isa = PBXGroup;
 			children = (
-				F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */,
-				F104DDC915A0B4AA0094D0ED /* MapKit.framework */,
 				F18D55C6159F61F400BA040E /* StoreFinder */,
 				F18D55BF159F61F400BA040E /* Frameworks */,
 				F18D55BD159F61F400BA040E /* Products */,
@@ -135,6 +136,8 @@
 		F18D55BF159F61F400BA040E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */,
+				F104DDC915A0B4AA0094D0ED /* MapKit.framework */,
 				F18D55C0159F61F400BA040E /* UIKit.framework */,
 				F18D55C2159F61F400BA040E /* Foundation.framework */,
 				F18D55C4159F61F400BA040E /* CoreGraphics.framework */,
@@ -312,6 +315,7 @@
 				F18D55FB159F631000BA040E /* FFAStoreListViewController.xib in Resources */,
 				F18D5604159F64B000BA040E /* FFAStoreDetailViewController.xib in Resources */,
 				F1556388159FCFC200A6BD73 /* defaultStoreLogo.png in Resources */,
+				F16E16FA15A230E500AA13FE /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +366,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Christian Jones (8NKE9JCJS2)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -377,6 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1F16C363-AA62-483C-8446-7D1042E962FF";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;

@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoreFinder/TableView/FFAStoreListViewController.m"
-         timestampString = "362869536.138586"
+         timestampString = "362953382.792581"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "189"
-         endingLineNumber = "189"
+         startingLineNumber = "194"
+         endingLineNumber = "194"
          landmarkName = "-request:didFailWithError:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -170,19 +170,6 @@
          startingLineNumber = "94"
          endingLineNumber = "94"
          landmarkName = "-initWithStore:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "StoreFinder/TableView/FFAStoreCell.m"
-         timestampString = "362868171.755649"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "25"
-         endingLineNumber = "25"
-         landmarkName = "-setLogoImage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
