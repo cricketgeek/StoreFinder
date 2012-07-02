@@ -10,6 +10,7 @@
 		F104DDCA15A0B4AA0094D0ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */; };
 		F104DDCB15A0B4AA0094D0ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F104DDC915A0B4AA0094D0ED /* MapKit.framework */; };
 		F1556388159FCFC200A6BD73 /* defaultStoreLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */; };
+		F16E16F215A22A1D00AA13FE /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F16E16F115A22A1D00AA13FE /* UIImage+Additions.m */; };
 		F18D55C1159F61F400BA040E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C0159F61F400BA040E /* UIKit.framework */; };
 		F18D55C3159F61F400BA040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C2159F61F400BA040E /* Foundation.framework */; };
 		F18D55C5159F61F400BA040E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18D55C4159F61F400BA040E /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 		F104DDC815A0B4AA0094D0ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F104DDC915A0B4AA0094D0ED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F1556386159FCFC200A6BD73 /* defaultStoreLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultStoreLogo.png; sourceTree = "<group>"; };
+		F16E16F015A22A1D00AA13FE /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		F16E16F115A22A1D00AA13FE /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
 		F18D55BC159F61F400BA040E /* StoreFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18D55C0159F61F400BA040E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F18D55C2159F61F400BA040E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -187,16 +190,18 @@
 				F18D55F7159F631000BA040E /* FFAStoreListViewController.h */,
 				F18D55F8159F631000BA040E /* FFAStoreListViewController.m */,
 				F18D55F9159F631000BA040E /* FFAStoreListViewController.xib */,
-				F18D55FC159F632600BA040E /* FFAStore.h */,
-				F18D55FD159F632600BA040E /* FFAStore.m */,
 				F18D5600159F64B000BA040E /* FFAStoreDetailViewController.h */,
 				F18D5601159F64B000BA040E /* FFAStoreDetailViewController.m */,
 				F18D5602159F64B000BA040E /* FFAStoreDetailViewController.xib */,
+				F18D55FC159F632600BA040E /* FFAStore.h */,
+				F18D55FD159F632600BA040E /* FFAStore.m */,
 				F18D5605159F6A6400BA040E /* FFAStoresRequest.h */,
 				F18D5606159F6A6400BA040E /* FFAStoresRequest.m */,
 				F18D5633159F93C700BA040E /* FFAStoreCell.h */,
 				F18D5634159F93C800BA040E /* FFAStoreCell.m */,
 				F18D5636159F98B400BA040E /* FFAStoreCell.xib */,
+				F16E16F015A22A1D00AA13FE /* UIImage+Additions.h */,
+				F16E16F115A22A1D00AA13FE /* UIImage+Additions.m */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				F18D5629159F6CC400BA040E /* CJSONScanner.m in Sources */,
 				F18D562A159F6CC400BA040E /* CJSONSerializer.m in Sources */,
 				F18D5635159F93C800BA040E /* FFAStoreCell.m in Sources */,
+				F16E16F215A22A1D00AA13FE /* UIImage+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

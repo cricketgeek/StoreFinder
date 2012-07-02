@@ -109,10 +109,10 @@
     [super viewDidUnload];
     self.webView = nil;
 }
-//
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-//{
-//    return YES;
-//}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
 
 @end

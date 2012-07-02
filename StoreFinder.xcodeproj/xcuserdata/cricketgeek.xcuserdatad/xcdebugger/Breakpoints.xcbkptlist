@@ -4,15 +4,15 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoreFinder/TableView/FFAStoreListViewController.m"
-         timestampString = "362869536.138586"
+         timestampString = "362949382.711928"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "189"
-         endingLineNumber = "189"
+         startingLineNumber = "180"
+         endingLineNumber = "180"
          landmarkName = "-request:didFinishWithObject:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -30,68 +30,16 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "StoreFinder/TableView/FFAStoresRequest.m"
-         timestampString = "362773549.605651"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "24"
-         endingLineNumber = "24"
-         landmarkName = "+startRequestForStoresWithDelegate:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoreFinder/TableView/FFAStoresRequest.m"
-         timestampString = "362780788.378729"
+         timestampString = "362949750.759302"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "61"
-         endingLineNumber = "61"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
          landmarkName = "-connection:didFailWithError:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "StoreFinder/TableView/FFAStoresRequest.m"
-         timestampString = "362780788.378729"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
-         landmarkName = "-connection:didReceiveData:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "StoreFinder/TableView/FFAStoresRequest.m"
-         timestampString = "362780788.378729"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
-         landmarkName = "-connection:didReceiveResponse:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "StoreFinder/TableView/FFAStoresRequest.m"
-         timestampString = "362780788.378729"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "70"
-         endingLineNumber = "70"
-         landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -190,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoreFinder/TableView/FFAStoreListViewController.m"
-         timestampString = "362868331.741268"
+         timestampString = "362949382.711928"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
          landmarkName = "-configureCell:forIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -216,12 +164,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoreFinder/TableView/FFAStoreListViewController.m"
-         timestampString = "362869536.138586"
+         timestampString = "362949382.711928"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114"
+         startingLineNumber = "103"
+         endingLineNumber = "103"
          landmarkName = "-configureCell:forIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "StoreFinder/TableView/FFAStoresRequest.m"
+         timestampString = "362949750.759302"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
+         landmarkName = "+startRequestForStoresWithDelegate:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

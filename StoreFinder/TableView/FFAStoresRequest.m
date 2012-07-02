@@ -20,17 +20,15 @@
 
 +(FFAStoresRequest*)startRequestForStoresWithDelegate:(id<FFAStoresRequestDelegate>)aDelegate
 {
-    //TODO: Cleanup
     FFAStoresRequest *ffaStoresRequest = [[FFAStoresRequest alloc] init];
     ffaStoresRequest.delegate = aDelegate;
     ffaStoresRequest.request = [NSURLRequest requestWithURL:[NSURL URLWithString:STORE_JSON_URL]];
     ffaStoresRequest.connection = [NSURLConnection connectionWithRequest:ffaStoresRequest.request delegate:ffaStoresRequest];
     if (ffaStoresRequest.connection) {
-        // Create the NSMutableData to hold the received data.
-        // receivedData is an instance variable declared elsewhere.
         ffaStoresRequest.receivedData = [[NSMutableData data] retain];
     } else {
-        // Inform the user that the connection failed.
+        NSLog(@"Failed to connect to URL");
+        //TODO: Inform the user that the connection failed.
     }
     return ffaStoresRequest;
 }
@@ -66,7 +64,6 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSLog(@"connection finished loading");
     if (self.delegate) {
         [delegate request:self didFinishWithObject:self.receivedData];
     }

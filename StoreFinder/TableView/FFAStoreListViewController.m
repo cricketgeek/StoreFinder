@@ -12,8 +12,8 @@
 #import "FFAStore.h"
 #import "FFAStoreDetailViewController.h"
 
-#define LOGO_WIDTH 210
-#define LOGO_HEIGHT 45
+#import "UIImage+Additions.h"
+
 #define ROW_HEIGHT 110
 
 @implementation FFAStoreListViewController
@@ -67,10 +67,10 @@
     self.cellNib = nil;
 }
 
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-//{
-//    return YES;
-//}
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
 
 #pragma mark - Table view data source
 
@@ -82,17 +82,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.stores count];
-}
-
-- (UIImage*)resizeImage:(UIImage*)image toSize:(CGSize)size
-{
-    //TODO: deal with different orientations here
-    UIGraphicsBeginImageContext(size);
-    CGRect imageRect = CGRectMake(0.0, 0.0, size.width, size.height);                
-    [image drawInRect:imageRect];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext(); 
-    return newImage;
 }
 
 - (void)configureCell:(FFAStoreCell*)cell forIndexPath:(NSIndexPath*)indexPath
@@ -113,16 +102,18 @@
                 NSData *imageData = [NSData dataWithContentsOfURL:logoURL];            
                 
                 //Load image on mainQueue/main thread
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{                
-                    UIImage *image = [UIImage imageWithData:imageData];
-                    store.logo = [self resizeImage:image toSize:CGSizeMake(LOGO_WIDTH, LOGO_HEIGHT)];
-                    
-                    FFAStoreCell *cell = (FFAStoreCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
-                    cell.logoImageView.image = store.logo;
-                    if (![self.loadedLogos objectForKey:store.logoURLPath]) {
-                        [self.loadedLogos setObject:store.logo forKey:store.logoURLPath];
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{ 
+                    if (imageData) {
+                        UIImage *image = [UIImage imageWithData:imageData];
+                        store.logo = [image sizeForCell];
+                        
+                        FFAStoreCell *cell = (FFAStoreCell*)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+                        cell.logoImageView.image = store.logo;
+                        if (![self.loadedLogos objectForKey:store.logoURLPath]) {
+                            [self.loadedLogos setObject:store.logo forKey:store.logoURLPath];
+                        }
+                        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];                        
                     }
-                    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
                 }];
             }];
         }        
