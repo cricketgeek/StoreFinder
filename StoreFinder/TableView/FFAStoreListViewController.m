@@ -123,11 +123,12 @@
     else {
         [cell setLogoImage:store.logo];
     }
-    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 110.0)];
-    [backgroundView setOpaque:NO];
-    [backgroundView setAlpha:0.1];
-    [backgroundView setBackgroundColor:[UIColor darkGrayColor]];
-    cell.selectedBackgroundView = backgroundView;
+    
+//    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 110.0)];
+//    [backgroundView setOpaque:NO];
+//    [backgroundView setAlpha:0.1];
+//    [backgroundView setBackgroundColor:[UIColor darkGrayColor]];
+//    cell.selectedBackgroundView = backgroundView;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
